@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goyeh/ui/login.dart';
 import 'package:goyeh/ui/packagepage.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: packagepage() ,
+      home: const SignInPage(),
     );
   }
 }

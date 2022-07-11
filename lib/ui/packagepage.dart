@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:smooth_star_rating/smooth_star_rating.dart';
-
 class packagepage extends StatefulWidget {
   const packagepage({Key? key}) : super(key: key);
 
@@ -84,7 +82,7 @@ class _packagepageState extends State<packagepage> {
                           child: Text("\$ 245",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold))),
-                      Positioned(
+                      /*   Positioned(
                           top: density(67),
                           left: density(20),
                           child: SmoothStarRating(
@@ -99,7 +97,7 @@ class _packagepageState extends State<packagepage> {
                               filledIconData: Icons.star,
                               color: Color.fromARGB(255, 255, 238, 1),
                               borderColor: Colors.black12,
-                              spacing: 0.0))
+                              spacing: 0.0))*/
                     ],
                   ),
                 )
