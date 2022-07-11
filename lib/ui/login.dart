@@ -51,9 +51,10 @@ class _SignInPageState extends State<SignInPage> {
               const SizedBox(
                 height: 15,
               ),
-              InkWell(
+              GestureDetector(
                 child: colorButton("Sign Up"),
                 onTap: () {
+                  print('pressed');
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => otpscreen()));
                 },
@@ -187,50 +188,25 @@ class _SignInPageState extends State<SignInPage> {
   }
 
   Widget colorButton(String name) {
-    return InkWell(
-      onTap: () async {
-        /*
-        try {
-         firebase_auth.UserCredential userCredential =
-              await firebaseAuth.signInWithEmailAndPassword(
-                  email: _emailController.text,
-                  password: _passwordController.text);
-          print(userCredential.user.email);
-          setState(() {
-            circular = false;
-          });
-          Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (builder) => const HomePage()),
-              (route) => false);
-        } catch (e) {
-          final snackbar = SnackBar(content: Text(e.toString()));
-          ScaffoldMessenger.of(context).showSnackBar(snackbar);
-          setState(() {
-            circular = false;
-          });
-        }*/
-      },
-      child: Container(
-        width: MediaQuery.of(context).size.width - 90,
-        height: 60,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          gradient: const LinearGradient(colors: [
-            Color(0xFFFD746C),
-            Color(0xFFFF9068),
-            Color(0xFFFD746C),
-          ]),
-        ),
-        child: Center(
-          child: circular
-              ? const CircularProgressIndicator()
-              : Text(name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                  )),
-        ),
+    return Container(
+      width: MediaQuery.of(context).size.width - 90,
+      height: 60,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        gradient: const LinearGradient(colors: [
+          Colors.amber,
+          Color(0xFFFF9068),
+          Color(0xFFFD746C),
+        ]),
+      ),
+      child: Center(
+        child: circular
+            ? const CircularProgressIndicator()
+            : Text(name,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                )),
       ),
     );
   }
