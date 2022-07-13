@@ -1,5 +1,5 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
-
+/*
 import 'package:flutter/material.dart';
 import 'package:otp_screen/otp_screen.dart';
 
@@ -27,8 +27,8 @@ class otpscreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: OtpScreen.withGradientBackground(
-          topColor: Color(0xFFcc2b5e),
-          bottomColor: Color(0xFF753a88),
+          topColor: Color.fromARGB(255, 215, 132, 42),
+          bottomColor: Color.fromARGB(255, 0, 0, 0),
           otpLength: 6,
           validateOtp: validateOtp,
           routeCallback: moveToNextScreen,
@@ -60,3 +60,4 @@ class SuccessfulOtpScreen extends StatelessWidget {
     );
   }
 }
+*/
